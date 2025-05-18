@@ -1,3 +1,4 @@
+import About from '@/components/modules/About/About'
 import Banner from '@/components/modules/Banner/Banner'
 import Footer from '@/components/shared/Footer'
 import Navbar from '@/components/shared/Navbar'
@@ -12,7 +13,7 @@ const Home = () => {
         <Banner />
       </section>
       <section id="about-section" className="h-screen bg-gray-800 text-white flex items-center justify-center">
-        ABOUT SECTION
+        <About />
       </section>
       <section id="skills-section" className="h-screen bg-gray-700 text-white flex items-center justify-center">
         SKILLS SECTION
