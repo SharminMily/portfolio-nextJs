@@ -1,5 +1,6 @@
 import About from '@/components/modules/About/About'
 import Banner from '@/components/modules/Banner/Banner'
+import Services from '@/components/modules/Services/Services'
 import Footer from '@/components/shared/Footer'
 import Navbar from '@/components/shared/Navbar'
 import React from 'react'
@@ -28,6 +29,8 @@ const Home = () => {
         blog
       </section>
     </>
+
+    <Services />
       
       <Footer />
     </div>
