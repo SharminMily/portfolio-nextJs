@@ -5,6 +5,7 @@ import { IoMdContact } from "react-icons/io";
 import { GrContact, GrProjects } from "react-icons/gr";
 import { AiFillSignal } from "react-icons/ai";
 import { CgClose } from "react-icons/cg";
+import Link from "next/link";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -70,15 +71,16 @@ const Navbar = () => {
           CONTACT
         </button>
       </li> */}
-      <li>
-        <button
-          onClick={() => handleScroll("contact-section")}
-          className={navItemClass("contact-section")}
-        >
-          <GrContact className="text-base" />
-          BLOG
-        </button>
-      </li>
+     <li>
+  <Link href="/blogs">
+    <button
+      className={navItemClass("contact-section")} // Retain your conditional styling
+    >
+      <GrContact className="text-base" />
+      BLOG
+    </button>
+  </Link>
+</li>
     </>
   );
 
