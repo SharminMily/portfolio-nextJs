@@ -23,7 +23,7 @@ const Navbar = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const navItemClass = (section : any) =>
     `flex items-center gap-2 text-base font-semibold ${
-      activeSection === section ? "text-[#f2079c]" : "text-white hover:text-[#f2079c]"
+      activeSection === section ? "text-cyan-400" : "text-white hover:text-cyan-400"
     }`;
 
   const NavOptions = (

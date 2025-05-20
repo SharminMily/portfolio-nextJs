@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
@@ -7,7 +8,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t-2 border-[#f2079c] p-4 bg-black text-white">
+    <footer className="border-t-2 border-cyan-400 p-4 bg-black text-white">
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Logo */}
         <div>
@@ -24,7 +25,7 @@ const Footer = () => {
             href="https://www.linkedin.com/in/sharmin-akther-098595296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-[#f2079c] p-2 hover:bg-[#f2079c] transition"
+            className="rounded-full border border-cyan-400 p-2 hover:bg-cyan-400 transition"
           >
             <FaLinkedin className="text-2xl" />
           </a>
@@ -32,13 +33,13 @@ const Footer = () => {
             href="https://github.com/SharminMily"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-[#f2079c] p-2 hover:bg-[#f2079c] transition"
+            className="rounded-full border border-cyan-400 p-2 hover:bg-cyan-400 transition"
           >
             <FaGithub className="text-2xl" />
           </a>
           <a
             href="mailto:sharminakther5599@gmail.com"
-            className="rounded-full border border-[#f2079c] p-2 hover:bg-[#f2079c] transition"
+            className="rounded-full border border-cyan-400 p-2 hover:bg-cyan-400 transition"
           >
             <SiGmail className="text-2xl" />
           </a>

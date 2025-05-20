@@ -8,7 +8,7 @@ import { ChevronDown, SquareTerminal, ShoppingCart, BookImage } from "lucide-rea
 export const NavItems = [
   {
     title: "Home",
-    url: "/dashboard/addProject",
+    url: "/",
     icon: <SquareTerminal className="w-5 h-5" />,
   },
  {

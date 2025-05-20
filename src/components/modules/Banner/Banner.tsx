@@ -19,24 +19,24 @@ const Banner = () => {
   return (
     <section
       id="home"
-      className="h-[720px] md:h-[700px] bg-cover bg-center"
+      className="bg-cover bg-center"
       style={{
         backgroundImage:
           "url(https://i.ibb.co/dgVzQLW/White-and-Orange-Modern-Digital-Marketing-Agency-Banner-Landscape.png)",
       }}
     >
-      <div className=" bg-opacity-30 w-full h-full flex items-center justify-center">
+      <div className=" bg-opacity-30 w-full h-full flex items-center justify-between mb=10">
         <div className="max-w-7xl mx-auto px-4 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
           {/* Text Section */}
           <div className="text-white md:w-1/2 space-y-4 mt-10 md:mt-0">
             <h1 className="text-3xl font-bold">Hey There...</h1>
             <h3 className="text-4xl font-bold">
               I'm{" "}
-              <span className="text-[#f2079c] uppercase tracking-wide">
+              <span className="text-cyan-400 uppercase tracking-wide">
                 Sha<span className="text-white">R</span>min
               </span>
             </h3>
-            <div className="text-2xl text-[#f2079c]">
+            <div className="text-2xl text-cyan-400">
               {text}
               <Cursor cursorColor="red" />
             </div>
@@ -46,7 +46,7 @@ const Banner = () => {
               href="https://drive.google.com/file/d/1zKH2u-yxGKw3PRh_AaXJU90miGww2vFJ/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md bg-[#f2079c] px-3 py-1.5 text-sm font-medium text-black shadow-sm transition hover:bg-white mt-4"
+              className="inline-flex items-center gap-2 rounded-md bg-cyan-400 px-3 py-1.5 text-sm font-medium text-black shadow-sm transition hover:bg-white mt-4"
             >
               <span>📄</span> Resume
             </a>

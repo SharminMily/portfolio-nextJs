@@ -4,33 +4,38 @@ import Services from '@/components/modules/Services/Services'
 import Footer from '@/components/shared/Footer'
 import Navbar from '@/components/shared/Navbar'
 import React from 'react'
+import Projects from './projects/page'
+import Skill from '@/components/modules/Skills/Skills'
+import ContactMe from '@/components/modules/ContactMe/ContactMe'
 
 const Home = () => {
   return (
-    <div> 
+    <div className="bg-[#031035] max-w-8xl mx-auto"> 
          <>
       <Navbar />
       <section id="home" className="h-screen text-white items-center justify-center text-4xl">
         <Banner />
       </section>
-      <section id="about-section" className="h-screen bg-gray-800 text-white flex items-center justify-center">
+      <section id="about-section" className="h-screen bg-[#031035] text-white flex items-center justify-center">
         <About />
       </section>
-      <section id="skills-section" className="h-screen bg-gray-700 text-white flex items-center justify-center">
-        SKILLS SECTION
+      <section id="skills-section" className="h-screen bg-[#031035] text-white flex items-center justify-center">
+       <Skill/>
       </section>
-      <section id="project-section" className="h-screen bg-gray-600 text-white flex items-center justify-center">
-        PROJECTS SECTION
+      <section id="project-section" className="h-screen bg-[#031035] text-white flex items-center justify-center">
+        <Projects />
       </section>
-      <section id="contact-section" className="h-screen bg-gray-500 text-white flex items-center justify-center">
-        CONTACT SECTION
-      </section>
-      <section id="contact-section" className="h-screen bg-gray-500 text-white flex items-center justify-center">
+      
+      {/* <section id="contact-section" className="h-screen bg-[#031035]text-white flex items-center justify-center">
         blog
-      </section>
+      </section> */}
     </>
 
     <Services />
+
+      <section id="contact-section" className=" bg-[#031035] text-white flex items-center justify-center">
+        <ContactMe />
+      </section>
       
       <Footer />
     </div>
