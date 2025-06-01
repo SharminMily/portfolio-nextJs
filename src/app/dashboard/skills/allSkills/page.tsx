@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
@@ -8,6 +7,7 @@ import { getAllSkills, updateSkill, deleteSkill, Skill } from "@/services/SkillS
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaEdit, FaTrash } from "react-icons/fa";
+import Image from "next/image";
 
 export default function AllSkill() {
   const [Skills, setSkills] = useState<Skill[]>([]);
@@ -123,7 +123,7 @@ export default function AllSkill() {
               className="card bg-base-100 shadow-xl border-4 border-cyan-300 overflow-hidden"
             >
               <figure>
-                <img
+                <Image height={100} width={100}
                   src={Skill.image}
                   alt={`Screenshot of ${Skill.title}`}
                   className="w-full h-48 object-cover"

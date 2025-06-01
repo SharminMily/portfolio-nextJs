@@ -6,6 +6,7 @@ import { GrContact, GrProjects } from "react-icons/gr";
 import { AiFillSignal } from "react-icons/ai";
 import { CgClose } from "react-icons/cg";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -86,10 +87,10 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#031035] bg-opacity-95 text-white shadow-md">
-      <div className="max-w-screen-xl mx-auto flex justify-between items-center px-6 py-1">
+      <div className="max-w-7xl mx-auto w-full flex justify-between items-center px-6 py-">
         {/* Logo */}
         <div>
-          <img
+          <Image height={100} width={100}
             src="https://i.ibb.co/M7HTfDb/SHARMIN-logo-removebg-preview.png"
             alt="Logo"
             className="w-36"

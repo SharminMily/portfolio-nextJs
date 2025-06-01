@@ -68,7 +68,7 @@ export default function TextEditor() {
           <span className="text-xs font-bold">H₂</span>
         </Button>
         <Button variant="ghost" size="icon" className="h-8 w-8">
-          <span className="text-xs">"</span>
+          <span className="text-xs"></span>
         </Button>
         <Button variant="ghost" size="icon" className="h-8 w-8">
           <span className="text-xs">&lt;/&gt;</span>

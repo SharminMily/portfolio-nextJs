@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -8,6 +8,7 @@ import { getAllProjects, updateProject, deleteProject, Project } from "@/service
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaEdit, FaTrash } from "react-icons/fa";
+import Image from "next/image";
 
 export default function AllProject() {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -24,6 +25,7 @@ export default function AllProject() {
         const data = await getAllProjects();
         console.log("Fetched Projects:", data);
         setProjects(data);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (err: any) {
         setError(err.message || "Failed to load projects");
       } finally {
@@ -126,7 +128,7 @@ export default function AllProject() {
               className="card bg-base-100 shadow-xl border-4 border-cyan-300 overflow-hidden"
             >
               <figure>
-                <img
+                <Image height={100} width={100}
                   src={project.image}
                   alt={`Screenshot of ${project.title}`}
                   className="w-full h-48 object-cover"
@@ -134,7 +136,10 @@ export default function AllProject() {
               </figure>
               <div className="card-body text-gray-300 p-4 bg-blue-950 rounded-b-xl border-b-2">
                 <h2 className="card-title text-xl font-semibold">{project.title}</h2>
-                <p className="text-gray-400">{project.description}</p>
+                  <p className="text-gray-400 mb-4">
+                  {project.description.split(" ").slice(0, 50).join(" ")}
+                  {project.description.split(" ").length > 50 && "..."}
+                </p>
 
                 <div className="flex justify-between items-center my-4">
                   <p className="text-lg font-semibold">Code Source:</p>

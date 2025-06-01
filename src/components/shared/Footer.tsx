@@ -1,5 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
+
 "use client";
+import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
@@ -12,7 +13,7 @@ const Footer = () => {
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Logo */}
         <div>
-          <img
+          <Image height={100} width={100}
             src="https://i.ibb.co/M7HTfDb/SHARMIN-logo-removebg-preview.png"
             alt="footer-logo"
             className="w-40"

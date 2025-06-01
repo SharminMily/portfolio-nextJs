@@ -10,19 +10,19 @@ import ContactMe from '@/components/modules/ContactMe/ContactMe'
 
 const Home = () => {
   return (
-    <div className="bg-[#031035] max-w-8xl mx-auto"> 
+    <div className="bg-[#031035] max-w-7xl mx-auto"> 
          <>
       <Navbar />
       <section id="home" className="h-screen text-white items-center justify-center text-4xl">
         <Banner />
       </section>
-      <section id="about-section" className="h-screen bg-[#031035] text-white flex items-center justify-center">
+      <section id="about-section" className=" bg-[#031035] text-white flex items-center justify-center">
         <About />
       </section>
-      <section id="skills-section" className="h-screen bg-[#031035] text-white flex items-center justify-center">
+      <section id="skills-section" className=" bg-[#031035] text-white flex items-center justify-center">
        <Skill/>
       </section>
-      <section id="project-section" className="h-screen bg-[#031035] text-white flex items-center justify-center">
+      <section id="project-section" className=" bg-[#031035] text-white flex items-center justify-center my-10">
         <Projects />
       </section>
       

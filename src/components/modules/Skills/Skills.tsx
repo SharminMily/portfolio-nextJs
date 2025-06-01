@@ -1,5 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 "use client"
-/* eslint-disable react/no-unknown-property */
+import Image from "next/image";
+
 import { useState, useEffect } from "react";
 
 interface Skill {
@@ -52,6 +55,7 @@ const Skill = () => {
         const fetchedSkills = await getAllSkills();
         setSkills(fetchedSkills);
         setLoading(false);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (err: any) {
         setError("Failed to load skills. Please try again later.");
         setLoading(false);
@@ -93,14 +97,14 @@ const Skill = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              {/* Render image: either as an img tag or SVG */}
+              {/* Render image: either as an Image height={100} tag or SVG */}
               {skill.image.includes("<svg") ? (
                 <div
                   dangerouslySetInnerHTML={{ __html: skill.image }}
                   className="w-14 h-14"
                 />
               ) : (
-                <img
+                <Image height={100} width={100}
                   src={skill.image}
                   alt={skill.title}
                   className="w-14 h-14 object-contain"

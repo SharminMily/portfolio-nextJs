@@ -37,7 +37,10 @@ export default function Projects() {
     return (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:my-20 my-8 px-4">
         {[...Array(4)].map((_, i) => (
-          <div key={i} className="card bg-base-100 shadow-xl border-4 border-cyan-300">
+          <div
+            key={i}
+            className="card bg-base-100 shadow-xl border-4 border-cyan-300"
+          >
             <div className="w-full h-48 bg-gray-700 animate-pulse" />
             <div className="card-body bg-blue-950 p-4">
               <div className="h-6 bg-gray-700 animate-pulse w-3/4" />
@@ -84,8 +87,13 @@ export default function Projects() {
                 />
               </figure>
               <div className="card-body text-gray-300 p-4 bg-blue-950 rounded-b-xl border-b-2">
-                <h2 className="card-title text-xl font-semibold">{project.title}</h2>
-                <p className="text-gray-400 mb-4">{project.description}</p>
+                <h2 className="card-title text-xl font-semibold">
+                  {project.title}
+                </h2>
+                <p className="text-gray-400 mb-4">
+                  {project.description.split(" ").slice(0, 30).join(" ")}
+                  {project.description.split(" ").length > 30 && "..."}
+                </p>
 
                 {/* <div className="flex justify-between items-center my-4">
                   <p className="text-lg font-semibold">Code Source:</p>

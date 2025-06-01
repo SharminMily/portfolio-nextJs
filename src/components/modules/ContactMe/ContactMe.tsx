@@ -1,6 +1,8 @@
 /* eslint-disable react/no-unknown-property */
 'use client';
 
+import Image from "next/image";
+
 const ContactMe = () => {
   return (
     <div className="w-full my-20 px-4 sm:px-6 lg:px-20 mb-28">
@@ -16,7 +18,7 @@ const ContactMe = () => {
         >
           {/* WhatsApp */}
           <div className="text-center w-[200px]">
-            <img
+            <Image height={100} width={100}
               className="w-12 rounded-xl mx-auto mb-2"
               src="https://i.ibb.co/dD506Dd/200-gif-cid-dda24d50hgfg0eelhctwq84m8pbs93owfo8mfh972ddwm52r-ep-v1-internal-gif-by-id-rid-200.gif"
               alt="WhatsApp"
@@ -27,7 +29,7 @@ const ContactMe = () => {
 
           {/* Home */}
           <div className="text-center w-[200px]">
-            <img
+            <Image height={100} width={100}
               className="w-12 rounded-full mx-auto mb-2"
               src="https://i.ibb.co/fq1MR5j/200-gif-cid-dda24d50kfd6smyjsa8dhyqwnfl5m2brwuhd3mj7nuofp4wm-ep-v1-internal-gif-by-id-rid-200.gif"
               alt="Home"
@@ -38,7 +40,7 @@ const ContactMe = () => {
 
           {/* Email */}
           <div className="text-center w-[200px]">
-            <img
+            <Image height={100} width={100}
               className="w-12 rounded-full mx-auto mb-2"
               src="https://i.ibb.co/b5FzD8w/200-gif-cid-dda24d5086lxo6nvewlbedtu7py1bu1pnek7io9i0vhdg1pa-ep-v1-internal-gif-by-id-rid-200.gif"
               alt="Email"
@@ -55,7 +57,7 @@ const ContactMe = () => {
           <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
             {/* Image */}
             <div className="w-full lg:w-1/2 flex justify-center">
-              <img
+              <Image height={100} width={100}
                 src="https://i.ibb.co/J3Q6wVm/200-gif-cid-dda24d50t1e11bdcfz89642llrq5ve9guzpdv8ac02mqk4ae-ep-v1-internal-gif-by-id-rid-200.gif"
                 alt="Contact"
                 className="w-full max-w-[450px] border-2 border-black rounded-[60px_1px_80px_1px]"
