@@ -18,7 +18,7 @@ const Navbar = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
       setActiveSection(section);
-      setOpen(false); // close menu on mobile
+      setOpen(false); 
     }
   };
 
@@ -119,7 +119,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* ---- Mobile Dropdown ---- */}
       {open && (
         <div className="md:hidden px-6 pb-4 bg-[#1A0B2E]">
           <ul className="flex flex-col gap-4">{NavOptions}</ul>
