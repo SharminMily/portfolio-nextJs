@@ -5,7 +5,6 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { createSkill } from "@/services/SkillServices";
 
-// Define TypeScript interface for Skill data
 interface SkillData {
   title: string;
   image: string;  
@@ -30,8 +29,7 @@ export default function AddSkill() {
     setLoading(true);
     setError("");
 
-    try {
-      // Omit empty optional fields
+    try {      
       const payload: SkillData = {
         title: formData.title,
         image: formData.image,        
@@ -44,7 +42,7 @@ export default function AddSkill() {
       console.error("Error:", err);
       setError(err.message || "Failed to create Skill");
     } finally {
-      setLoading(false); // Reset loading state
+      setLoading(false); 
     }
   };
 
