@@ -1,7 +1,9 @@
 
 const Education = () => {
   return (
-    <div>Education</div>
+    <div>
+      <h1 className="">Education</h1>
+    </div>
   )
 }
 

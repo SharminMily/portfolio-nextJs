@@ -21,7 +21,6 @@ const Navbar = () => {
       setOpen(false); 
     }
   };
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const navItemClass = (section : any) =>
     `flex items-center gap-2 text-base font-semibold ${
@@ -75,7 +74,7 @@ const Navbar = () => {
      <li>
   <Link href="/blogs">
     <button
-      className={navItemClass("contact-section")} // Retain your conditional styling
+      className={navItemClass("contact-section")} 
     >
       <GrContact className="text-base" />
       BLOG
