@@ -11,12 +11,12 @@ const ContactMe = () => {
           Contact Me
         </h1>
 
-        {/* Contact Info Cards */}
+        {/* -- Contact Info Cards -- */}
         <div
           data-aos="zoom-in"
           className="w-full flex flex-wrap justify-center gap-8 bg-[#0c0932] bg-opacity-60 rounded-md shadow-inner shadow-cyan-400 border border-cyan-400 p-6 sm:p-10"
         >
-          {/* WhatsApp */}
+          {/*-- WhatsApp-- */}
           <div className="text-center w-[200px]">
             <Image height={100} width={100}
               className="w-12 rounded-xl mx-auto mb-2"
