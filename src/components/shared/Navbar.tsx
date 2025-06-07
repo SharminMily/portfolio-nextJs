@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { useState } from "react";
 import { HiHome } from "react-icons/hi2";
@@ -13,6 +14,7 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("");
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  
   const handleScroll = (section: any) => {
     const element = document.getElementById(section);
     if (element) {
