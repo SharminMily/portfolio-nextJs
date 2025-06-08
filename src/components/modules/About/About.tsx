@@ -38,7 +38,7 @@ const About = () => {
         </div>
 
         {/* Text Content */}
-        <div className="w-full lg:w-1/2 space-y-4">
+        <div className="w-full p-6 lg:w-1/2 space-y-4">
           <div
             data-aos={open ? "zoom-in" : "zoom-out"}
             className="shadow-inner shadow-cyan-400 p-6 rounded-xl bg-black bg-opacity-40"
