@@ -77,7 +77,7 @@ export default function Projects() {
             <div
               key={project.id}
               data-aos="zoom-in"
-              className="card bg-base-100 shadow-xl border-4 border-cyan-300 overflow-hidden"
+              className="card bg-base-100 rounded-xl shadow-xl border-2 border-cyan-300 overflow-hidden"
             >
               <figure>
                 <img
@@ -91,7 +91,7 @@ export default function Projects() {
                   {project.title}
                 </h2>
                 <p className="text-gray-400 mb-4">
-                  {project.description.split(" ").slice(0, 30).join(" ")}
+                  {project.description.split(" ").slice(0, 33).join(" ")}
                   {project.description.split(" ").length > 30 && "..."}
                 </p>
 
