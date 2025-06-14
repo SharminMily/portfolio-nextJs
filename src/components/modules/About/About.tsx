@@ -21,7 +21,7 @@ const About = () => {
         data-aos="flip-left"
         data-aos-easing="ease-out-cubic"
         data-aos-duration="2000"
-        className="text-5xl text-center text-cyan-400 font-bold mb-10"
+        className="md:text-5xl text-3xl text-center text-cyan-400 font-bold mb-10"
       >
         About Me
       </h1>
@@ -38,7 +38,7 @@ const About = () => {
         </div>
 
         {/* Text Content */}
-        <div className="w-full p-6 lg:w-1/2 space-y-4">
+        <div className="w-full lg:p-4 md:p-8 lg:w-1/2 space-y-4">
           <div
             data-aos={open ? "zoom-in" : "zoom-out"}
             className="shadow-inner shadow-cyan-400 p-6 rounded-xl bg-black bg-opacity-40"
@@ -47,7 +47,7 @@ const About = () => {
               {open ? "Why You Hire Me ?" : "INTRODUCTION:"}
             </h2>
 
-            <p className="text-gray-200 font-[Georgia] leading-relaxed">
+            <p className="text-gray-200 text-sm font-[Georgia] leading-relaxed">
               {open ? (
                 <>
                   I am a Web, Full stack developer and I have skills in

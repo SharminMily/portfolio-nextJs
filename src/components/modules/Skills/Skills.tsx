@@ -84,16 +84,16 @@ const Skill = () => {
       <section id="skills-section">
         <h1
           data-aos="fade-right"
-          className="text-cyan-400 text-4xl underline font-bold text-center mb-10"
+          className="text-cyan-400 md:text-4xl text-3xl underline font-bold text-center mb-10"
         >
           MY SKILLS
         </h1>
 
-        <div className="flex flex-wrap justify-evenly items-center gap-4 p-4 py-10 mx-16 rounded-lg border border-cyan-400 shadow-inner shadow-cyan-400">
+        <div className="flex flex-wrap justify-evenly items-center gap-4 md:p-4 px-2 md:py-10 py-4 md:mx-16 mx-4 rounded-lg border border-cyan-400 shadow-inner shadow-cyan-400">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="relative mb-12 w-20 p-3 border-2 border-cyan-400 hover:bg-cyan-400 rounded-full shadow-lg shadow-white"
+              className="relative md:mb-12 mb-8 md:w-20 w-16  p-3 border-2 border-cyan-400 hover:bg-cyan-400 rounded-full shadow-lg shadow-white"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
@@ -112,7 +112,7 @@ const Skill = () => {
                 />
               )}
               {hoveredIndex === index && (
-                <div className="absolute top-24 right-0 -left-4 w-28 p-2 border border-cyan-400 rounded-xl text-white text-sm text-center shadow-lg">
+                <div className="absolute top-24 right-0 -left-4 md:w-28 w-20 p-1 md:p-2 border border-cyan-400 rounded-xl text-white text-sm text-center shadow-lg">
                   {skill.title}
                 </div>
               )}

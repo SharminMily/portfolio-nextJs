@@ -57,7 +57,7 @@ const Banner = () => {
           <div className="w-full md:w-1/2 flex justify-center">
             <iframe
               src="https://lottie.host/embed/00fc78a7-704a-4a47-91a4-67f750023312/FYNQUn8NHR.json"
-              className="md:w-full h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px]"
+              className="md:w-full h-1/2 w-1/2 md:h-96 lg:h-[500px] xl:h-[600px]"
               title="Lottie Animation"
               allowFullScreen
             />

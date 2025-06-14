@@ -95,13 +95,13 @@ const ProjectDetailsPage = () => {
               </div>
             </div>
 
-            <div className="mt-6 flex justify-end space-x-4">
+            <div className="mt-6 md:flex gap-2 grid grid-cols-2 text-center justify-end space-x-4">
               {project.frontendCode && (
                 <a
                   href={project.frontendCode}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-900 transition-colors"
+                  className="md:px-4 md:py-2 p-1 bg-gray-800 text-white rounded-md hover:bg-gray-900 transition-colors"
                 >
                   Frontend Code
                 </a>
@@ -111,7 +111,7 @@ const ProjectDetailsPage = () => {
                   href={project.backendCode}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"
+                  className="md:px-4 md:py-2 p-1 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"
                 >
                   Backend Code
                 </a>
@@ -121,13 +121,13 @@ const ProjectDetailsPage = () => {
                   href={project.liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 bg-cyan-500 text-white rounded-md hover:bg-cyan-600 transition-colors"
+                  className="md:px-4 md:py-2 p-1 bg-cyan-500 text-white rounded-md hover:bg-cyan-600 transition-colors"
                 >
                   Live Demo
                 </a>
               )}             
               <Link href="/projects">
-                <button className="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition-colors">
+                <button className="md:px-4 md:py-2 px-4 py-1 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition-colors">
                   Back to Projects
                 </button>
               </Link>
