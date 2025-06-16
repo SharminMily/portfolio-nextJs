@@ -26,7 +26,7 @@ const About = () => {
         About Me
       </h1>
 
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 items-center justify-between shadow-lg shadow-cyan-400 rounded-lg p-6">
+      <div className=" flex flex-col lg:flex-row gap-10 items-center justify-between shadow-lg shadow-cyan-400 rounded-lg p-6">
         {/* Image */}
         <div className="w-full lg:w-1/2 flex justify-center items-center">
           <Image
