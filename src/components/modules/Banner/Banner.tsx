@@ -2,19 +2,19 @@
 /* eslint-disable react/jsx-no-target-blank */
 "use client";
 
-import { Cursor, useTypewriter } from "react-simple-typewriter";
+// import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 const Banner = () => {
-  const [text] = useTypewriter({
-    words: [
-      "Full stack Developer !",
-      "Creative Developer !",
-      "Font end Developer !",
-      "Backend Developer !",
-      "Responsive web design",
-    ],
-    loop: 20,
-  });
+  // const [text] = useTypewriter({
+  //   words: [
+  //     "Full stack Developer !",
+  //     "Creative Developer !",
+  //     "Font end Developer !",
+  //     "Backend Developer !",
+  //     "Responsive web design",
+  //   ],
+  //   loop: 20,
+  // });
 
   return (
     <section
@@ -37,17 +37,21 @@ const Banner = () => {
                 Sha<span className="text-white">R</span>min
               </span>
             </h3>
-            <div className="text-xl sm:text-2xl lg:text-3xl text-cyan-400">
+
+             <h3 className="text-3xl text-cyan-400 sm:text-4xl lg:text-5xl font-bold">
+              Full stack Developer!            
+            </h3>
+            {/* <div className="text-xl sm:text-2xl lg:text-3xl text-cyan-400">
               {text}
               <Cursor cursorColor="red" />
-            </div>
+            </div> */}
 
             {/* Small Button */}
             <a
               href="https://drive.google.com/file/d/1zKH2u-yxGKw3PRh_AaXJU90miGww2vFJ/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md bg-cyan-400 px-3 py-1.5 text-sm font-medium text-black shadow-sm transition hover:bg-white mt-4"
+              className="inline-flex items-center gap-2 rounded-md bg-cyan-400 px-4 py-2.5 text-sm font-medium text-black shadow-sm transition hover:bg-white mt-4"
             >
               <span>📄</span> Resume
             </a>

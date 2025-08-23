@@ -10,7 +10,8 @@ import ContactMe from "@/components/modules/ContactMe/ContactMe";
 
 const Home = () => {
   return (
-    <div className="bg-[#031035] max-w-7xl mx-auto">
+    <div className="bg-[#020223] max-w-7xl mx-auto">
+      {/* bg-[#031035] */}
       <>
         <Navbar />
         <section
@@ -21,19 +22,19 @@ const Home = () => {
         </section>
         <section
           id="about-section"
-          className=" bg-[#031035] text-white flex items-center justify-center"
+          className=" bg-[#020223] text-white flex items-center justify-center"
         >
           <About />
         </section>
         <section
           id="skills-section"
-          className=" bg-[#031035] text-white flex items-center justify-center"
+          className=" bg-[#020223] text-white flex items-center justify-center"
         >
           <Skill />
         </section>
         <section
           id="project-section"
-          className=" bg-[#031035] text-white flex items-center justify-center my-10"
+          className=" bg-[#020223] text-white flex items-center justify-center my-10"
         >
           <Projects />
         </section>
@@ -47,7 +48,7 @@ const Home = () => {
 
       <section
         id="contact-section"
-        className=" bg-[#031035] text-white flex items-center justify-center"
+        className=" bg-[#020223] text-white flex items-center justify-center"
       >
         <ContactMe />
       </section>

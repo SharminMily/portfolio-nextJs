@@ -3,7 +3,7 @@
 const Services = () => {
   return (
     <div className="my-20">
-      <h1 className="text-3xl sm:text-4xl pb-6 bg-[#031035] text-center text-cyan-400 font-bold">
+      <h1 className="text-3xl sm:text-4xl pb-6 bg-[#020223] text-center text-cyan-400 font-bold">
         Services
       </h1>
 
