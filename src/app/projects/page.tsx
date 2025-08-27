@@ -77,7 +77,7 @@ export default function Projects() {
             <div
               key={project.id}
               data-aos="zoom-in"
-              className="card bg-base-100 rounded-xl shadow-xl border-2 border-cyan-300 overflow-hidden"
+              className="card bg-base-50 rounded-xl shadow-xl border border-cyan-500 overflow-hidden"
             >
               <figure>
                 <img
@@ -90,6 +90,29 @@ export default function Projects() {
                 <h2 className="card-title text-xl font-semibold">
                   {project.title}
                 </h2>
+
+               <div className="flex gap-3 mt-1">
+                <button className=" px-2 rounded-rl-2xl rounded-tr-2xl rounded-bl-2xl text-black font-medium border border-cyan-950 bg-gradient-to-b from-cyan-200 to-cyan-600 
+                   transition hover:from-cyan-100 hover:to-cyan-400">
+                    React
+                </button>
+                 <button className=" px-2 rounded-b-lgrounded-rl-2xl rounded-tr-2xl rounded-bl-2xl text-black font-medium border border-cyan-950 bg- bg-gradient-to-b from-cyan-200 to-cyan-600 
+                   transition hover:from-cyan-100 hover:to-cyan-400">
+                    Tailwind CSS
+                </button>                
+                    
+                <button className=" px-2 rounded-rl-2xl rounded-tr-2xl rounded-bl-2xl text-black font-medium border border-cyan-950 bg- bg-gradient-to-b from-cyan-200 to-cyan-600 
+                   transition hover:from-cyan-100 hover:to-cyan-400">
+                    Node
+                </button>    
+
+                <button className=" px-2 rounded-rl-2xl rounded-tr-2xl rounded-bl-2xl text-black font-medium border border-cyan-950 bg- bg-gradient-to-b from-cyan-200 to-cyan-600 
+                   transition hover:from-cyan-100 hover:to-cyan-400">
+                    TS
+                </button>  
+               
+               </div>
+
                 <p className="text-gray-400 mb-4">
                   {project.description.split(" ").slice(0, 33).join(" ")}
                   {project.description.split(" ").length > 30 && "..."}
@@ -117,21 +140,26 @@ export default function Projects() {
                   </div>
                 </div> */}
 
-                <a
+                <div className=" flex justify-between">
+                  <div className="">Mar 2025 - July 2025 </div>
+                  <div className=" flex gap-2">
+                     <a
                   href={project.liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full text-center text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-base px-5 py-3 mb-3"
+                  className=""
                 >
                   Live
                 </a>
 
                 <a
                   href={`/projects/${project.id}`}
-                  className="block w-full text-center text-cyan-400 border border-cyan-400 hover:bg-cyan-500 hover:text-white transition duration-300 font-medium rounded-lg text-base px-5 py-2"
+                  className=""
                 >
                   Details
                 </a>
+                  </div>
+                </div>
               </div>
             </div>
           ))}

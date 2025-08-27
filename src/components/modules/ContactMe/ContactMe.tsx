@@ -47,7 +47,7 @@ const ContactMe = () => {
             />
             <h1 className="text-cyan-400 font-semibold text-lg">Email</h1>
             <h3 className="text-sm text-white break-words px-2 max-w-[180px] mx-auto">
-              sharminakther5599@gmail.com
+              sharminmily039@gmail.com
             </h3>
           </div>
         </div>
