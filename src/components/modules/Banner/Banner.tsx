@@ -2,6 +2,9 @@
 /* eslint-disable react/jsx-no-target-blank */
 "use client";
 
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+
 // import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 const Banner = () => {
@@ -29,8 +32,8 @@ const Banner = () => {
         <div className="w-full px-4 sm:px-6 lg:px-10 flex flex-col-reverse md:flex-row items-center justify-between md:gap-6 sm:gap-2 lg:gap-12">
 
           {/* Text Section */}
-          <div className="text-center text-white w-full md:w-1/2 space-y-4 mt-10 md:mt-0">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Hey There...</h1>
+          <div className="lg:text-start  text-white w-full md:w-1/2 space-y-4 mt-10 md:mt-0">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Hello World...</h1>
             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
               I'm{" "}
               <span className="text-cyan-500 uppercase tracking-wide">Sh
@@ -47,16 +50,46 @@ const Banner = () => {
               <Cursor cursorColor="red" />
             </div> */}
 
-            {/* Small Button */}
-            <a
-              href="https://drive.google.com/file/d/1zKH2u-yxGKw3PRh_AaXJU90miGww2vFJ/view?usp=sharing"
+           <div className="flex items-center gap-2">
+               {/* resume */}
+            {/* <a
+              href="https://drive.google.com/file/d/1T43fYbS81xpJQectj_YJp2gZ8FehkcNy/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-md px-4 py-2.5 text-sm font-medium text-black shadow-sm mt-4 bg-gradient-to-b from-cyan-200 to-cyan-600 
  transition hover:from-cyan-100 hover:to-cyan-400 "
             >
               <span>📄</span> Resume
-            </a>
+            </a> */}
+
+             {/* Social Icons */}
+        <div className="flex gap-4 mt-4">
+          <a
+            href="https://www.linkedin.com/in/sharmin-akther-098595296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-cyan-400 p-2 hover:bg-cyan-400 transition"
+          >
+            <FaLinkedin className="text-2xl" />
+          </a>
+          <a
+            href="https://github.com/SharminMily"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-cyan-400 p-2 hover:bg-cyan-400 transition"
+          >
+            <FaGithub className="text-2xl" />
+          </a>
+          <a
+            href="mailto:sharminakther5599@gmail.com"
+            className="rounded-full border border-cyan-400 p-2 hover:bg-cyan-400 transition"
+          >
+            <SiGmail className="text-2xl" />
+          </a>
+        </div>
+
+           </div>
+
           </div>
 
           {/* Animation Section */}

@@ -7,8 +7,9 @@ const ContactMe = () => {
   return (
     <div className="w-full my-20 px-4 sm:px-6 lg:px-20 mb-28">
       <section id="contact-section" className="w-full">
-        <h1 className="text-3xl sm:text-4xl underline my-10 text-center text-cyan-400 font-semibold">
-          Contact Me
+        <h1 className="text-3xl sm:text-4xl my-10 text-center text-cyan-400 font-semibold">
+          C
+          <span className="bg-gradient-to-b from-white to-cyan-600 bg-clip-text text-transparent">ontact  Me </span>
         </h1>
 
         {/* -- Contact Info Cards -- */}
@@ -95,7 +96,7 @@ const ContactMe = () => {
                 <div className="flex flex-col">
                   <label className="text-white mb-1">Message</label>
                   <textarea
-                    className="px-3 py-2 rounded text-black"
+                    className="px-3 py-2 rounded text-white"
                     name="message"
                     placeholder="Your Message"
                     rows={5}
@@ -105,7 +106,7 @@ const ContactMe = () => {
 
                 {/* Submit */}
                 <input
-                  className="text-white font-bold bg-cyan-400 py-2 w-full rounded hover:bg-cyan-500 transition duration-300 cursor-pointer"
+                  className=" w-full py-2 rounded duration-300 cursor-pointer  font-medium text-black shadow-sm mt-4 bg-gradient-to-b from-cyan-200 to-cyan-600 transition hover:from-cyan-100 hover:to-cyan-400"
                   type="submit"
                   value="Send"
                 />

@@ -23,7 +23,9 @@ const About = () => {
         data-aos-duration="2000"
         className="md:text-5xl text-3xl text-center text-cyan-400 font-bold mb-10"
       >
-        About Me
+        A
+        <span className="bg-gradient-to-b from-white to-cyan-600 bg-clip-text text-transparent">bout Me</span>
+        
       </h1>
 
       <div className=" flex flex-col lg:flex-row gap-10 items-center justify-between shadow-lg shadow-cyan-400 rounded-lg p-6">
@@ -41,7 +43,7 @@ const About = () => {
         <div className="w-full lg:p-4 md:p-8 lg:w-1/2 space-y-4">
           <div
             data-aos={open ? "zoom-in" : "zoom-out"}
-            className="shadow-inner shadow-cyan-400 p-6 rounded-xl bg-black bg-opacity-40"
+            className="shadow-inner shadow-cyan-400 p-6 rounded-xl bg-[#111930] bg-opacity-40"
           >
             <h2 className="text-2xl text-cyan-400 font-bold underline mb-4">
               {open ? "Why You Hire Me ?" : "INTRODUCTION:"}
@@ -73,7 +75,7 @@ const About = () => {
           {/* Toggle Button */}
           <button
             onClick={() => setOpen(!open)}
-            className="mt-4 inline-flex items-center gap-2 border px-4 py-2 rounded-lg text-white hover:bg-cyan-500 transition"
+            className="mt-4 inline-flex items-center gap-2 border border-cyan-500 px-4 py-2 rounded-lg text-white hover:bg-cyan-500 transition"
           >
             {open ? (
               <>

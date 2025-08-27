@@ -63,7 +63,8 @@ export default function Projects() {
           data-aos-duration="2000"
           className="text-4xl text-center text-cyan-400 font-bold mb-12"
         >
-          --- PROJECT ---
+           P 
+          <span className="bg-gradient-to-b from-white to-cyan-600 bg-clip-text text-transparent">ROJECT </span>-
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:my-20 my-8">
@@ -80,7 +81,7 @@ export default function Projects() {
                   className="w-full h-48 object-cover"
                 />
               </figure>
-              <div className="card-body text-gray-300 p-4 bg-blue-950 rounded-b-xl border-b-2">
+              <div className="card-body text-white p-4 bg-[#111930] rounded-b-xl border-b-2">
                 <h2 className="card-title text-xl font-semibold">
                   {project.title}
                 </h2>
@@ -97,7 +98,7 @@ export default function Projects() {
   ))}
 </div>
 
-                <p className="text-gray-400 mb-4">
+                <p className="text-gray-300 mb-4">
                   {project.description.split(" ").slice(0, 33).join(" ")}
                   {project.description.split(" ").length > 30 && "..."}
                 </p>
