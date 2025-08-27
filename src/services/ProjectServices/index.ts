@@ -6,6 +6,8 @@ export interface Project {
   title: string;
   image: string;
   description: string;
+  technology?: string[];
+  projectTime?: string;
   liveLink?: string;
   frontendCode?: string;
   backendCode?: string;

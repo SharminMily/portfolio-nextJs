@@ -34,23 +34,17 @@ export default function Projects() {
   }, []);
 
   if (loading) {
-    return (
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:my-20 my-8 px-4">
-        {[...Array(4)].map((_, i) => (
-          <div
-            key={i}
-            className="card bg-base-100 shadow-xl border-4 border-cyan-300"
-          >
-            <div className="w-full h-48 bg-gray-700 animate-pulse" />
-            <div className="card-body bg-blue-950 p-4">
-              <div className="h-6 bg-gray-700 animate-pulse w-3/4" />
-              <div className="h-4 bg-gray-700 animate-pulse w-full mt-2" />
-            </div>
-          </div>
-        ))}
-      </div>
-    );
-  }
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:my-20 my-8 px-4">
+      {[...Array(4)].map((_, i) => (
+        <div
+          key={i}
+          className="w-full h-48 bg-gray-700 animate-pulse rounded-xl"
+        ></div>
+      ))}
+    </div>
+  );
+}
 
   if (error) {
     return (
@@ -91,27 +85,17 @@ export default function Projects() {
                   {project.title}
                 </h2>
 
-               <div className="flex gap-3 mt-1">
-                <button className=" px-2 rounded-rl-2xl rounded-tr-2xl rounded-bl-2xl text-black font-medium border border-cyan-950 bg-gradient-to-b from-cyan-200 to-cyan-600 
-                   transition hover:from-cyan-100 hover:to-cyan-400">
-                    React
-                </button>
-                 <button className=" px-2 rounded-b-lgrounded-rl-2xl rounded-tr-2xl rounded-bl-2xl text-black font-medium border border-cyan-950 bg- bg-gradient-to-b from-cyan-200 to-cyan-600 
-                   transition hover:from-cyan-100 hover:to-cyan-400">
-                    Tailwind CSS
-                </button>                
-                    
-                <button className=" px-2 rounded-rl-2xl rounded-tr-2xl rounded-bl-2xl text-black font-medium border border-cyan-950 bg- bg-gradient-to-b from-cyan-200 to-cyan-600 
-                   transition hover:from-cyan-100 hover:to-cyan-400">
-                    Node
-                </button>    
-
-                <button className=" px-2 rounded-rl-2xl rounded-tr-2xl rounded-bl-2xl text-black font-medium border border-cyan-950 bg- bg-gradient-to-b from-cyan-200 to-cyan-600 
-                   transition hover:from-cyan-100 hover:to-cyan-400">
-                    TS
-                </button>  
-               
-               </div>
+            <div className="flex gap-3 mt-1 flex-wrap">
+  {project.technology?.map((tech: string, index: number) => (
+    <button
+      key={index}
+      className="px-2 rounded-tr-2xl rounded-bl-2xl rounded-rl-2xl text-black font-medium border border-cyan-950 bg-gradient-to-b from-cyan-200 to-cyan-600 
+        transition hover:from-cyan-100 hover:to-cyan-400"
+    >
+      {tech}
+    </button>
+  ))}
+</div>
 
                 <p className="text-gray-400 mb-4">
                   {project.description.split(" ").slice(0, 33).join(" ")}
@@ -141,20 +125,21 @@ export default function Projects() {
                 </div> */}
 
                 <div className=" flex justify-between">
-                  <div className="">Mar 2025 - July 2025 </div>
+                  <div className="">{project.projectTime} </div>
                   <div className=" flex gap-2">
                      <a
                   href={project.liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className=""
+                  className="border-cyan-500 rounded-lg hover:bg-cyan-600 roun border px-2.5 "
                 >
                   Live
+
                 </a>
 
                 <a
                   href={`/projects/${project.id}`}
-                  className=""
+                  className="border-cyan-500 hover:bg-cyan-600 rounded-lg border px-2.5 "
                 >
                   Details
                 </a>
