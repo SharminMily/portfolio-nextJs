@@ -76,16 +76,16 @@ const Navbar = () => {
         </Link>
       </li>
       <li>
-        <Link href="/blogs">
+        <Link href="https://drive.google.com/file/d/1T43fYbS81xpJQectj_YJp2gZ8FehkcNy/view?usp=sharing">
           <button className="">
          
             <span className="md:text-sm font-semibold"> 📄 RESUME</span>
-            <a
+            {/* <a
               href="https://drive.google.com/file/d/1T43fYbS81xpJQectj_YJp2gZ8FehkcNy/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className=" "
-            ></a>
+            ></a> */}
           </button>
         </Link>
       </li>

@@ -28,14 +28,14 @@ const About = () => {
         
       </h1>
 
-      <div className=" flex flex-col lg:flex-row gap-10 items-center justify-between shadow-lg shadow-cyan-400 rounded-lg p-6">
+      <div className=" flex flex-col lg:flex-row gap-10 items-center justify-between shadow-lg shadow-cyan-600 rounded-lg p-6">
         {/* Image */}
         <div className="w-full lg:w-1/2 flex justify-center items-center">
           <Image
           height={500} width={500}
             src="https://i.ibb.co/9b5CFth/IMG-20230601-101917-removebg-preview.png"
             alt="Sharmin"
-            className="h-[50vh] w-72 object-cover rounded-lg border-4 border-cyan-300 shadow-2xl hover:shadow-cyan-300"
+            className="h-[50vh] w-72 object-cover rounded-lg border-4 border-cyan-600 shadow-2xl hover:shadow-cyan-300"
           />
         </div>
 
@@ -45,7 +45,7 @@ const About = () => {
             data-aos={open ? "zoom-in" : "zoom-out"}
             className="shadow-inner shadow-cyan-400 p-6 rounded-xl bg-[#111930] bg-opacity-40"
           >
-            <h2 className="text-2xl text-cyan-400 font-bold underline mb-4">
+            <h2 className="text-2xl text-cyan-500 font-bold underline mb-4">
               {open ? "Why You Hire Me ?" : "INTRODUCTION:"}
             </h2>
 
@@ -75,7 +75,7 @@ const About = () => {
           {/* Toggle Button */}
           <button
             onClick={() => setOpen(!open)}
-            className="mt-4 inline-flex items-center gap-2 border border-cyan-500 px-4 py-2 rounded-lg text-white hover:bg-cyan-500 transition"
+            className="mt-4 inline-flex items-center gap-2 border border-cyan-500 px-4 py-2 rounded-lg text-white hover:bg-cyan-600 transition"
           >
             {open ? (
               <>

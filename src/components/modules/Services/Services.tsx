@@ -28,7 +28,7 @@ const Services = () => {
               data-aos="flip-left"
               data-aos-easing="ease-out-cubic"
               data-aos-duration="2000"
-              className="border-2 border-cyan-300 p-6 rounded-xl bg-[#0f172ab3] backdrop-blur-md"
+              className="border-2 border-cyan-500 p-6 rounded-xl bg-[#0f172ab3] backdrop-blur-md"
             >
               <h2 className="text-2xl md:text-3xl font-semibold text-white text-center">
                 Web Development
@@ -52,7 +52,7 @@ const Services = () => {
               data-aos="flip-left"
               data-aos-easing="ease-out-cubic"
               data-aos-duration="2000"
-              className="border-2 border-cyan-300 p-6 rounded-xl bg-[#0f172ab3] backdrop-blur-md"
+              className="border-2 border-cyan-500 p-6 rounded-xl bg-[#0f172ab3] backdrop-blur-md"
             >
               <h2 className="text-2xl md:text-3xl font-semibold text-white text-center">
                 Responsive Design

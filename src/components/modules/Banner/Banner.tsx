@@ -68,7 +68,7 @@ const Banner = () => {
             href="https://www.linkedin.com/in/sharmin-akther-098595296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-cyan-400 p-2 hover:bg-cyan-400 transition"
+            className="rounded-full border border-cyan-500 p-2 hover:bg-cyan-600 transition"
           >
             <FaLinkedin className="text-2xl" />
           </a>
@@ -76,13 +76,13 @@ const Banner = () => {
             href="https://github.com/SharminMily"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-cyan-400 p-2 hover:bg-cyan-400 transition"
+            className="rounded-full border border-cyan-500 p-2 hover:bg-cyan-600 transition"
           >
             <FaGithub className="text-2xl" />
           </a>
           <a
             href="mailto:sharminakther5599@gmail.com"
-            className="rounded-full border border-cyan-400 p-2 hover:bg-cyan-400 transition"
+            className="rounded-full border border-cyan-500 p-2 hover:bg-cyan-600 transition"
           >
             <SiGmail className="text-2xl" />
           </a>

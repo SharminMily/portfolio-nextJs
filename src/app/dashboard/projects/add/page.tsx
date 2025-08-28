@@ -10,6 +10,8 @@ interface ProjectData {
   title: string;
   image: string;
   description: string;
+  technology?: string | string[];
+  projectTime?: string;
   liveLink?: string;
   frontendCode?: string;
   backendCode?: string;
@@ -21,6 +23,8 @@ export default function AddProject() {
     title: "",
     image: "",
     description: "",
+    technology: "",
+    projectTime: "",
     liveLink: "",
     frontendCode: "",
     backendCode: "",
@@ -44,6 +48,11 @@ export default function AddProject() {
         title: formData.title,
         image: formData.image,
         description: formData.description,
+        projectTime: formData.projectTime,
+         ...(typeof formData.technology === "string"
+  ? { technology: formData.technology.split(",").map(t => t.trim()) }
+  : { technology: formData.technology }
+),  // convert to array
         ...(formData.liveLink && { liveLink: formData.liveLink }),
         ...(formData.frontendCode && { frontendCode: formData.frontendCode }),
         ...(formData.backendCode && { backendCode: formData.backendCode }),
@@ -90,6 +99,24 @@ export default function AddProject() {
           onChange={handleChange}
           className="w-full px-4 py-2 border rounded"
           required
+        />
+        {/* Tecnology */}
+          <input
+          type="text"
+          name="technology"
+          placeholder="Tecnology [example - React ,Js, TS etc]"
+          value={formData.technology as string}
+          onChange={handleChange}
+          className="w-full px-4 py-2 border rounded"
+        />
+        {/* Project Time */}
+          <input
+          type="text"
+          name="projectTime"
+          placeholder="Project Timing (example - Mar 2025 - July 2025)"
+          value={formData.projectTime}
+          onChange={handleChange}
+          className="w-full px-4 py-2 border rounded"
         />
         <input
           type="text"

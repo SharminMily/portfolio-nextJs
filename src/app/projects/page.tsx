@@ -155,7 +155,7 @@ export default function Projects() {
 
                     <a
                       href={`/projects/${project.id}`}
-                      className="border-cyan-500 hover:bg-cyan-600 rounded-lg border px-2.5 "
+                      className="border-cyan-500 bg-cyan-600 hover:bg-cyan-800 rounded-lg border px-2.5 "
                     >
                       Details
                     </a>
