@@ -6,7 +6,6 @@ import { IoMdContact } from "react-icons/io";
 import { GrContact, GrProjects } from "react-icons/gr";
 import { AiFillSignal } from "react-icons/ai";
 import { CgClose } from "react-icons/cg";
-import { TbFileCv } from "react-icons/tb";
 import Link from "next/link";
 import Image from "next/image";
 

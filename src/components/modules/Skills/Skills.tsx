@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 "use client";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Image from "next/image";
 
 import { useState, useEffect } from "react";
@@ -45,11 +47,12 @@ const Skill = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
+   
   // Fetch skills on component mount
   useEffect(() => {
-    const fetchSkills = async () => {
-      try {
+     AOS.init({ duration: 1000 });
+    const fetchSkills = async () => {   
+            try {
         setLoading(true);
         const fetchedSkills = await getAllSkills();
         setSkills(fetchedSkills);
@@ -111,6 +114,7 @@ const Skill = () => {
   {skills.map((skill, index) => (
     <div
       key={index}
+      data-aos="zoom-in"
       className="bg-[#111930] w-32 h-40 lg:px-8 flex flex-col items-center justify-center rounded-2xl shadow-md hover:shadow-cyan-500/50 transition duration-300 relative"
     >
       {/* Top Highlight Line */}
@@ -118,7 +122,7 @@ const Skill = () => {
 
       {/* Icon */}
       {skill.image.includes("<svg") ? (
-        <div
+        <div  
           dangerouslySetInnerHTML={{ __html: skill.image }}
           className="w-14 h-14"
         />

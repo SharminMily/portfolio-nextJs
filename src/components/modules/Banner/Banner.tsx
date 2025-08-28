@@ -36,12 +36,12 @@ const Banner = () => {
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Hello World...</h1>
             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
               I'm{" "}
-              <span className="text-cyan-500 uppercase tracking-wide">Sh
+              <span data-aos="fade-left" className="text-cyan-500 uppercase tracking-wide">Sh
                 <span className="bg-gradient-to-b from-white to-cyan-600 bg-clip-text text-transparent">aRmin</span>
               </span>
             </h3>
 
-          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-cyan-500">Full  <span className="bg-gradient-to-b from-white to-cyan-600 bg-clip-text text-transparent">
+          <h3 data-aos="fade-left" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-cyan-500">Full  <span className="bg-gradient-to-b from-white to-cyan-600 bg-clip-text text-transparent">
      Stack Developer
   </span>
 </h3>

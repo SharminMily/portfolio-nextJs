@@ -34,17 +34,17 @@ export default function Projects() {
   }, []);
 
   if (loading) {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:my-20 my-8 px-4">
-      {[...Array(4)].map((_, i) => (
-        <div
-          key={i}
-          className="w-full h-48 bg-gray-700 animate-pulse rounded-xl"
-        ></div>
-      ))}
-    </div>
-  );
-}
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:my-20 my-8 px-4">
+        {[...Array(4)].map((_, i) => (
+          <div
+            key={i}
+            className="w-full h-48 bg-gray-700 animate-pulse rounded-xl"
+          ></div>
+        ))}
+      </div>
+    );
+  }
 
   if (error) {
     return (
@@ -57,15 +57,31 @@ export default function Projects() {
   return (
     <div className="lg:mx-16 px-4 py-8">
       <section id="project-section">
-        <h1
-          data-aos="flip-left"
-          data-aos-easing="ease-out-cubic"
-          data-aos-duration="2000"
-          className="text-4xl text-center text-cyan-400 font-bold mb-12"
-        >
-           P 
-          <span className="bg-gradient-to-b from-white to-cyan-600 bg-clip-text text-transparent">ROJECT </span>-
-        </h1>
+       
+        <div className="flex flex-col lg:flex-row justify-between items-center max-w-6xl mx-auto px-4">
+          {/* Left Side */}
+          <div className="lg:text-left text-center">
+            <h1
+              data-aos="fade-right"
+              className="text-cyan-400 md:text-4xl text-3xl font-bold"
+            >
+              P
+              <span className="bg-gradient-to-b from-white to-cyan-600 bg-clip-text text-transparent">
+                ROJECT
+              </span>{" "}
+              -
+            </h1>
+          </div>
+
+          {/* Right Side */}
+          <div className="lg:text-right text-center mt-4 lg:mt-0">
+            <p className="text-gray-200 max-w-md">
+              Every big achievement starts with a small idea, With effort 
+              <br />
+             And passion, that idea turns into reality.
+            </p>
+          </div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:my-20 my-8">
           {projects.map((project) => (
@@ -86,17 +102,17 @@ export default function Projects() {
                   {project.title}
                 </h2>
 
-            <div className="flex gap-3 mt-1 flex-wrap">
-  {project.technology?.map((tech: string, index: number) => (
-    <button
-      key={index}
-      className="px-2 rounded-tr-2xl rounded-bl-2xl rounded-rl-2xl text-black font-medium border border-cyan-950 bg-gradient-to-b from-cyan-200 to-cyan-600 
+                <div className="flex gap-3 mt-1 flex-wrap">
+                  {project.technology?.map((tech: string, index: number) => (
+                    <button
+                      key={index}
+                      className="px-2 rounded-tr-2xl rounded-bl-2xl rounded-rl-2xl text-black font-medium border border-cyan-950 bg-gradient-to-b from-cyan-200 to-cyan-600 
         transition hover:from-cyan-100 hover:to-cyan-400"
-    >
-      {tech}
-    </button>
-  ))}
-</div>
+                    >
+                      {tech}
+                    </button>
+                  ))}
+                </div>
 
                 <p className="text-gray-300 mb-4">
                   {project.description.split(" ").slice(0, 33).join(" ")}
@@ -128,22 +144,21 @@ export default function Projects() {
                 <div className=" flex justify-between">
                   <div className="">{project.projectTime} </div>
                   <div className=" flex gap-2">
-                     <a
-                  href={project.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border-cyan-500 rounded-lg hover:bg-cyan-600 roun border px-2.5 "
-                >
-                  Live
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border-cyan-500 rounded-lg hover:bg-cyan-600 roun border px-2.5 "
+                    >
+                      Live
+                    </a>
 
-                </a>
-
-                <a
-                  href={`/projects/${project.id}`}
-                  className="border-cyan-500 hover:bg-cyan-600 rounded-lg border px-2.5 "
-                >
-                  Details
-                </a>
+                    <a
+                      href={`/projects/${project.id}`}
+                      className="border-cyan-500 hover:bg-cyan-600 rounded-lg border px-2.5 "
+                    >
+                      Details
+                    </a>
                   </div>
                 </div>
               </div>

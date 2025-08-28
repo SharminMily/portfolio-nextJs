@@ -3,11 +3,15 @@
 const Services = () => {
   return (
     <div className="my-20">
-      <h1 className="text-3xl sm:text-4xl pb-6 bg-[#010118] text-center text-cyan-400 font-bold">
-        S
-        <span className="bg-gradient-to-b from-white to-cyan-600 bg-clip-text text-transparent">ervices </span>
-        -
-      </h1>
+       <h1
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+          className="text-4xl text-center text-cyan-400 font-bold mb-12"
+        >
+           S
+          <span className="bg-gradient-to-b from-white to-cyan-600 bg-clip-text text-transparent">ERVICES </span>-
+        </h1>
 
       {/* Background image section */}
       <div
