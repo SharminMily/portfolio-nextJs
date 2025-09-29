@@ -3,7 +3,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { getAllProjects, Project } from "@/services/ProjectServices";
@@ -152,7 +151,6 @@ export default function Projects() {
                     >
                       Live
                     </a>
-
                     <a
                       href={`/projects/${project.id}`}
                       className="border-cyan-500 bg-cyan-600 hover:bg-cyan-800 rounded-lg border px-2.5 "
