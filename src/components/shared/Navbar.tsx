@@ -76,7 +76,7 @@ const Navbar = () => {
         </Link>
       </li>
       <li>
-        <Link href="https://drive.google.com/file/d/1T43fYbS81xpJQectj_YJp2gZ8FehkcNy/view?usp=sharing">
+        <Link href="https://drive.google.com/file/d/1zKH2u-yxGKw3PRh_AaXJU90miGww2vFJ/view?usp=sharing">
           <button className="">
          
             <span className="md:text-sm font-semibold"> 📄 RESUME</span>
@@ -91,9 +91,9 @@ const Navbar = () => {
       </li>
     </>
   );
-
+///
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 text-white bg-transparent overflow-x-hidden">
+    <nav className="fixed top-0 left-0 w-full  text-white bg-transparent overflow-x-hidden border bg-cyan-500 ">
       <div className="max-w-7xl mx-auto w-full flex justify-between items-center px-4 sm:px-6 lg:px-8 py-3 bg-[#010118] bg-opacity-95 shadow-md">
         {/* Logo */}
         <div>

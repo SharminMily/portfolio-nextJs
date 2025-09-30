@@ -93,7 +93,7 @@ export default function Projects() {
                 <img
                   src={project.image}
                   alt={`Screenshot of ${project.title}`}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-72"
                 />
               </figure>
               <div className="card-body text-white p-4 bg-[#111930] rounded-b-xl border-b-2">
