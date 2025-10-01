@@ -1,12 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 "use client";
-
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import { getAllProjects, updateProject, deleteProject, Project } from "@/services/ProjectServices";
 import AOS from "aos";
-import "aos/dist/aos.css";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import Image from "next/image";
 
@@ -136,6 +134,16 @@ export default function AllProject() {
               </figure>
               <div className="card-body text-gray-300 p-4 bg-blue-950 rounded-b-xl border-b-2">
                 <h2 className="card-title text-xl font-semibold">{project.title}</h2>
+                {/* rounded-tr-2xl rounded-bl-2xl rounded-rl-2xl text-black font-medium border border-cyan-950 bg-gradient-to-b from-cyan-200 to-cyan-600 
+        transition hover:from-cyan-100 hover:to-cyan-400 */}
+                  {project.technology?.map((tech: string, index: number) => (
+                    <button
+                      key={index}
+                      className="px-2 "
+                    >
+                      {tech}
+                    </button>
+                  ))}
                   <p className="text-gray-400 mb-4">
                   {project.description.split(" ").slice(0, 50).join(" ")}
                   {project.description.split(" ").length > 50 && "..."}
@@ -222,6 +230,28 @@ export default function AllProject() {
                   required
                 />
               </div>
+            
+              <div className="mb-4">
+                {/* <label className="block text-gray-300 mb-1">Technology</label>
+                <input
+                  type="text"
+                  name="Technology"
+                  value={editForm.technology || ""}
+                  onChange={handleInputChange}
+                  className="w-full p-2 rounded bg-gray-800 text-gray-300 border border-cyan-300"
+                  required
+                /> */}
+                <label className="block text-gray-300 mb-1">Technology</label>
+                <input
+                  type="text"
+                  name="technology"
+                  value={editForm.technology || ""}
+                  onChange={handleInputChange}
+                  className="w-full p-2 rounded bg-gray-800 text-gray-300 border border-cyan-300"
+                  required
+                />
+              </div>
+
               <div className="mb-4">
                 <label className="block text-gray-300 mb-1">Image URL</label>
                 <input

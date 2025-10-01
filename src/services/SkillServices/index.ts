@@ -36,7 +36,7 @@ export const createSkill = async (skillData: any) => {
 
 export const getAllSkills = async (): Promise<Skill[]> => {
   const uri = `${process.env.NEXT_PUBLIC_API_URL}/api/skills`;
-  console.log("Request URL:", uri);
+  // console.log("Request URL:", uri);
 
   if (!process.env.NEXT_PUBLIC_API_URL) {
     throw new Error("API URL is not defined");
@@ -52,11 +52,11 @@ export const getAllSkills = async (): Promise<Skill[]> => {
     headers,
   });
 
-  console.log("Response Status:", res.status);
+  // console.log("Response Status:", res.status);
 
   if (!res.ok) {
     const error = await res.json();
-    console.error("Error Response:", error);
+    // console.error("Error Response:", error);
     throw new Error(error.message || "Failed to fetch Skills");
   }
 
@@ -66,7 +66,7 @@ export const getAllSkills = async (): Promise<Skill[]> => {
 export const updateSkill = async (id: string, skillData: any) => {
   const uri = `${process.env.NEXT_PUBLIC_API_URL}/api/skills/${id}`;
 
-  console.log("Payload:", skillData);
+  // console.log("Payload:", skillData);
 
   if (!process.env.NEXT_PUBLIC_API_URL) {
     throw new Error("API URL is not defined");
@@ -82,11 +82,11 @@ export const updateSkill = async (id: string, skillData: any) => {
     body: JSON.stringify(skillData),
   });
 
-  console.log("Response Status:", res.status);
+  // console.log("Response Status:", res.status);
 
   if (!res.ok) {
     const error = await res.json();
-    console.error("Error Response:", error);
+    // console.error("Error Response:", error);
     throw new Error(error.message || "Failed to update Skill");
   }
 
@@ -95,7 +95,7 @@ export const updateSkill = async (id: string, skillData: any) => {
 
 export const deleteSkill = async (id: string) => {
   const uri = `${process.env.NEXT_PUBLIC_API_URL}/api/skills/${id}`;
-  console.log("Request URL:", uri);
+  // console.log("Request URL:", uri);
 
   if (!process.env.NEXT_PUBLIC_API_URL) {
     throw new Error("API URL is not defined");
@@ -110,11 +110,11 @@ export const deleteSkill = async (id: string) => {
     headers,
   });
 
-  console.log("Response Status:", res.status);
+  // console.log("Response Status:", res.status);
 
   if (!res.ok) {
     const error = await res.json();
-    console.error("Error Response:", error);
+    // console.error("Error Response:", error);
     throw new Error(error.message || "Failed to delete Skill");
   }
 
@@ -138,11 +138,11 @@ export const getSkillDetails = async (id: string): Promise<Skill> => {
     headers,
   });
 
-  console.log("Response Status:", res.status);
+  // console.log("Response Status:", res.status);
 
   if (!res.ok) {
     const error = await res.json();
-    console.error("Error Response:", error);
+    // console.error("Error Response:", error);
     throw new Error(error.message || "Failed to fetch Skill details");
   }
 

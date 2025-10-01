@@ -15,8 +15,8 @@ export interface Project {
 
 export const createProject = async (projectData: any) => {
   const uri = `${process.env.NEXT_PUBLIC_API_URL}/api/projects`;
-  console.log("Request URL:", uri); 
-  console.log("Payload:", projectData); 
+  // console.log("Request URL:", uri); 
+  // console.log("Payload:", projectData); 
 
   const headers: HeadersInit = {
     "Content-Type": "application/json",    
@@ -28,11 +28,11 @@ export const createProject = async (projectData: any) => {
     body: JSON.stringify(projectData), 
   });
 
-  console.log("Response Status:", res.status); 
+  // console.log("Response Status:", res.status); 
 
   if (!res.ok) {
     const error = await res.json();
-    console.error("Error Response:", error); 
+    // console.error("Error Response:", error); 
     throw new Error(error.message || "Failed to create project");
   }
 
@@ -42,7 +42,7 @@ export const createProject = async (projectData: any) => {
 
 export const getAllProjects = async (): Promise<Project[]> => {
   const uri = `${process.env.NEXT_PUBLIC_API_URL}/api/projects`;
-  console.log("Request URL:", uri);
+  // console.log("Request URL:", uri);
 
   if (!process.env.NEXT_PUBLIC_API_URL) {
     throw new Error("API URL is not defined");
@@ -57,7 +57,7 @@ export const getAllProjects = async (): Promise<Project[]> => {
     headers,
   });
 
-  console.log("Response Status:", res.status);
+  // console.log("Response Status:", res.status);
 
   if (!res.ok) {
     const error = await res.json();

@@ -11,8 +11,8 @@ export interface Blog {
 
 export const createBlog = async (BlogData: any) => {
   const uri = `${process.env.NEXT_PUBLIC_API_URL}/api/blogs`;
-  console.log("Request URL:", uri); 
-  console.log("Payload:", BlogData); 
+  // console.log("Request URL:", uri); 
+  // console.log("Payload:", BlogData); 
 
   const headers: HeadersInit = {
     "Content-Type": "application/json",    
@@ -24,11 +24,11 @@ export const createBlog = async (BlogData: any) => {
     body: JSON.stringify(BlogData), 
   });
 
-  console.log("Response Status:", res.status); 
+  // console.log("Response Status:", res.status); 
 
   if (!res.ok) {
     const error = await res.json();
-    console.error("Error Response:", error); 
+    // console.error("Error Response:", error); 
     throw new Error(error.message || "Failed to create Blog");
   }
 
@@ -54,11 +54,11 @@ export const getAllBlogs = async (): Promise<Blog[]> => {
     headers,
   });
 
-  console.log("Response Status:", res.status);
+  // console.log("Response Status:", res.status);
 
   if (!res.ok) {
     const error = await res.json();
-    console.error("Error Response:", error);
+    // console.error("Error Response:", error);
     throw new Error(error.message || "Failed to fetch Blogs");
   }
 
@@ -68,7 +68,7 @@ export const getAllBlogs = async (): Promise<Blog[]> => {
 export const updateBlog = async (id: string, BlogData: any) => {
   const uri = `${process.env.NEXT_PUBLIC_API_URL}/api/blogs/${id}`;
 
-  console.log("Payload:", BlogData);
+  // console.log("Payload:", BlogData);
 
   if (!process.env.NEXT_PUBLIC_API_URL) {
     throw new Error("API URL is not defined");
@@ -84,11 +84,11 @@ export const updateBlog = async (id: string, BlogData: any) => {
     body: JSON.stringify(BlogData),
   });
 
-  console.log("Response Status:", res.status);
+  // console.log("Response Status:", res.status);
 
   if (!res.ok) {
     const error = await res.json();
-    console.error("Error Response:", error);
+    // console.error("Error Response:", error);
     throw new Error(error.message || "Failed to update Blog");
   }
 
@@ -97,7 +97,7 @@ export const updateBlog = async (id: string, BlogData: any) => {
 
 export const deleteBlog = async (id: string) => {
   const uri = `${process.env.NEXT_PUBLIC_API_URL}/api/blogs/${id}`;
-  console.log("Request URL:", uri);
+  // console.log("Request URL:", uri);
 
   if (!process.env.NEXT_PUBLIC_API_URL) {
     throw new Error("API URL is not defined");
@@ -112,11 +112,11 @@ export const deleteBlog = async (id: string) => {
     headers,
   });
 
-  console.log("Response Status:", res.status);
+  // console.log("Response Status:", res.status);
 
   if (!res.ok) {
     const error = await res.json();
-    console.error("Error Response:", error);
+    // console.error("Error Response:", error);
     throw new Error(error.message || "Failed to delete Blog");
   }
 
@@ -125,7 +125,7 @@ export const deleteBlog = async (id: string) => {
 
 export const getBlogDetails = async (id: string): Promise<Blog> => {
   const uri = `${process.env.NEXT_PUBLIC_API_URL}/api/blogs/${id}`;
-  console.log("Request URL:", uri);
+  // console.log("Request URL:", uri);
 
   if (!process.env.NEXT_PUBLIC_API_URL) {
     throw new Error("API URL is not defined");
@@ -140,11 +140,11 @@ export const getBlogDetails = async (id: string): Promise<Blog> => {
     headers,
   });
 
-  console.log("Response Status:", res.status);
+  // console.log("Response Status:", res.status);
 
   if (!res.ok) {
     const error = await res.json();
-    console.error("Error Response:", error);
+    // console.error("Error Response:", error);
     throw new Error(error.message || "Failed to fetch Blog details");
   }
 

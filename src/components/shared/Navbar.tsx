@@ -91,10 +91,10 @@ const Navbar = () => {
       </li>
     </>
   );
-///
+///bg-transparent 
   return (
-    <nav className="fixed top-0 left-0 w-full  text-white bg-transparent overflow-x-hidden border bg-cyan-500 ">
-      <div className="max-w-7xl mx-auto w-full flex justify-between items-center px-4 sm:px-6 lg:px-8 py-3 bg-[#010118] bg-opacity-95 shadow-md">
+   <nav className="fixed top-0 left-0 w-full z-50 bg-[#010118] text-white border-b border-cyan-400">
+  <div className="w-full flex justify-between items-center px-4 sm:px-6 lg:px-8 py-3 bg-opacity-95 shadow-md">
         {/* Logo */}
         <div>
           <Image
@@ -141,7 +141,7 @@ const Navbar = () => {
 
       {/* Mobile Dropdown */}
       {open && (
-        <div className="md:hidden px-4 sm:px-6 md:px-8 pb-4 bg-[#1A0B2E] transition-all duration-300">
+        <div className="md:hidden px-4 sm:px-6 md:px-8 pb-4 bg-[#010118] transition-all duration-300">
           <ul className="flex flex-col gap-3 sm:gap-4">{NavOptions}</ul>
         </div>
       )}

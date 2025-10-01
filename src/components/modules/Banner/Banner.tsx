@@ -28,7 +28,7 @@ const Banner = () => {
       //     "url(https://i.ibb.co/dgVzQLW/White-and-Orange-Modern-Digital-Marketing-Agency-Banner-Landscape.png)",
       // }}
     >
-      <div className="bg-opacity-60 lg:pt-20 pt-10 md:pb-0 pb-10 w-full h-full flex items-center justify-center">
+      <div className=" bg-opacity-60 lg:pt-20 pt-10 md:pb-0 pb-10 w-full h-full flex items-center justify-center">
         <div className="w-full px-4 sm:px-6 lg:px-10 flex flex-col-reverse md:flex-row items-center justify-between md:gap-6 sm:gap-2 lg:gap-12">
 
           {/* Text Section */}

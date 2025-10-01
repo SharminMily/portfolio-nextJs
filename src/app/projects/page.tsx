@@ -4,7 +4,6 @@
 
 import { useEffect, useState } from "react";
 import AOS from "aos";
-import "aos/dist/aos.css";
 import { getAllProjects, Project } from "@/services/ProjectServices";
 
 export default function Projects() {
@@ -20,7 +19,7 @@ export default function Projects() {
     const fetchProjects = async () => {
       try {
         const data = await getAllProjects();
-        console.log("Fetched Projects:", data);
+        // console.log("Fetched Projects:", data);
         setProjects(data);
       } catch (err: any) {
         setError(err.message || "Failed to load projects");
@@ -96,7 +95,7 @@ export default function Projects() {
                   className="w-full h-72"
                 />
               </figure>
-              <div className="card-body text-white p-4 bg-[#111930] rounded-b-xl border-b-2">
+              <div className="card-body w-full h-full text-white p-4 bg-[#111930] rounded-b-xl border-b-2">
                 <h2 className="card-title text-xl font-semibold">
                   {project.title}
                 </h2>
