@@ -39,10 +39,7 @@ const Home = () => {
           <Projects />
         </section>
 
-        {/* <section id="contact-section" className="h-screen bg-[#031035]text-white flex items-center justify-center">
-        blog
-      </section> */}
-      </>
+       </>
 
       <Services />
 

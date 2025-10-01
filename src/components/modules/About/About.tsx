@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 import { IoArrowBackOutline } from "react-icons/io5";
 import { TiChevronRight } from "react-icons/ti";
 import AOS from "aos";
-import "aos/dist/aos.css";
 import Image from "next/image";
+
 
 const About = () => {
   const [open, setOpen] = useState(false);
@@ -31,9 +31,10 @@ const About = () => {
       <div className=" flex flex-col lg:flex-row gap-10 items-center justify-between shadow-lg shadow-cyan-600 rounded-lg p-6">
         {/* Image */}
         <div className="w-full lg:w-1/2 flex justify-center items-center">
+        {/* c:\Users\hp\OneDrive\Pictures\myportfoliopic.jpg    https://i.ibb.co/9b5CFth/IMG-20230601-101917-removebg-preview.png */}
           <Image
           height={500} width={500}
-            src="https://i.ibb.co/9b5CFth/IMG-20230601-101917-removebg-preview.png"
+            src="/myportfoliopic.jpg"
             alt="Sharmin"
             className="h-[50vh] w-72 object-cover rounded-lg border-4 border-cyan-600 shadow-2xl hover:shadow-cyan-300"
           />

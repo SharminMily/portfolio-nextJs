@@ -81,54 +81,45 @@ const Skill = () => {
           </div>
         </div>
 
-    <div className="mx-6 flex flex-wrap justify-center gap-6 md:gap-6 px-4 py-10">
-<Marquee
-  speed={40}
-  pauseOnHover={true}
-  gradient={false}
-  autoFill={true}  
-  loop={0}         
-  className="px-2 md:px-4 py-6 md:py-10"
->
-  {skills.map((skill, index) => (
-    <div
-      key={index}
-      className="bg-[#111930] 
-                 w-24 h-32 sm:w-28 sm:h-36 md:w-32 md:h-40 
-                 mx-2 sm:mx-3 md:mx-4 
-                 flex flex-col items-center justify-center 
-                 rounded-2xl shadow-md 
-                 hover:shadow-cyan-500/50 
-                 transition duration-300 relative"
-    >
-      {/* Top Line */}
-      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent rounded-t-2xl"></div>
-
-      {/* Icon */}
-      {skill.image.includes("<svg") ? (
-        <div
-          dangerouslySetInnerHTML={{ __html: skill.image }}
-          className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14"
-        />
-      ) : (
-        <Image
-          height={50}
-          width={50}
-          src={skill.image}
-          alt={skill.title}
-          className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 object-contain mb-2"
-        />
-      )}
-
-      {/* Title */}
-      <p className="text-white text-xs sm:text-sm md:text-base font-medium mt-2 md:mt-4">
-        {skill.title}
-      </p>
+<div className="flex flex-wrap justify-center gap-6 md:gap-6 px-4 py-10">
+      <Marquee
+        speed={100}
+        pauseOnHover={true}
+        gradient={false}
+        //autoFill={true}
+        loop={0} 
+        className="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto px-2 md:px-4 py-6 md:py-10"
+      >
+        {skills.map((skill, index) => (
+          <div
+            key={index}
+            className="bg-[#111930] w-28 h-36 flex flex-col items-center justify-center mx-3 rounded-2xl shadow-md hover:shadow-cyan-500/50 transition duration-300 relative"
+          >
+            {/* Top Line */}
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent rounded-t-2xl"></div>
+            {/* Icon */}
+            {skill.image.includes('<svg') ? (
+              <div
+                dangerouslySetInnerHTML={{ __html: skill.image }}
+                className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14"
+              />
+            ) : (
+              <Image
+                height={50}
+                width={50}
+                src={skill.image}
+                alt={skill.title}
+                className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 object-contain mb-2"
+              />
+            )}
+            {/* Title */}
+            <p className="text-white text-xs sm:text-sm md:text-base font-medium mt-2 md:mt-4">
+              {skill.title}
+            </p>
+          </div>
+        ))}
+      </Marquee>
     </div>
-  ))}
-</Marquee>
-
-</div>
 
 
 
