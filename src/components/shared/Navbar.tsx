@@ -13,7 +13,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
-  const handleScroll = (section: any) => {
+  const handleScroll = (section : any) => {
     const element = document.getElementById(section);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -23,11 +23,11 @@ const Navbar = () => {
   };
 
   const navItemClass = (section: any) =>
-    `flex items-center gap-2 text-sm sm:text-base md:text-lg font-semibold ${
+    `flex items-center gap-1 sm:gap-2 text-xs sm:text-sm md:text-base lg:text-lg font-semibold ${
       activeSection === section
         ? "text-cyan-400"
-        : "text-white hover:text-cyan-400"
-    } transition-colors duration-200`;
+        : "text-white hover:text-cyan-400 focus:text-cyan-400"
+    } px-2 sm:px-3 py-1 sm:py-2 rounded hover:bg-gray-700 focus:bg-gray-700 transition-colors duration-200`;
 
   const NavOptions = (
     <>
@@ -36,8 +36,8 @@ const Navbar = () => {
           onClick={() => handleScroll("home")}
           className={navItemClass("home")}
         >
-          <HiHome className="text-base sm:text-lg lg:text-xl " />
-          <span className="md:text-sm"> HOME</span>
+          <HiHome className="text-xs sm:text-base md:text-lg lg:text-xl" />
+          <span className="text-xs sm:text-sm md:text-base inline">Home</span>
         </button>
       </li>
       <li>
@@ -45,8 +45,8 @@ const Navbar = () => {
           onClick={() => handleScroll("about-section")}
           className={navItemClass("about-section")}
         >
-          <IoMdContact className="text-base sm:text-lg lg:text-xl" />
-          <span className="md:text-sm">ABOUT</span>
+          <IoMdContact className="text-xs sm:text-base md:text-lg lg:text-xl" />
+          <span className="text-xs sm:text-sm md:text-base inline">About</span>
         </button>
       </li>
       <li>
@@ -54,8 +54,8 @@ const Navbar = () => {
           onClick={() => handleScroll("skills-section")}
           className={navItemClass("skills-section")}
         >
-          <AiFillSignal className="text-base sm:text-lg lg:text-xl" />
-          <span className="md:text-sm"> SKILLS</span>
+          <AiFillSignal className="text-xs sm:text-base md:text-lg lg:text-xl" />
+          <span className="text-xs sm:text-sm md:text-base inline">Skills</span>
         </button>
       </li>
       <li>
@@ -63,86 +63,81 @@ const Navbar = () => {
           onClick={() => handleScroll("project-section")}
           className={navItemClass("project-section")}
         >
-          <GrProjects className="text-sm md:text-sm sm:text-base lg:text-lg" />
-          <span className="md:text-sm"> PROJECTS</span>
+          <GrProjects className="text-xs sm:text-base md:text-lg lg:text-xl" />
+          <span className="text-xs sm:text-sm md:text-base inline ">Projects</span>
         </button>
       </li>
       <li>
         <Link href="/blogs">
           <button className={navItemClass("contact-section")}>
-            <GrContact className="text-sm sm:text-base lg:text-lg" />
-            <span className="md:text-sm"> BLOG</span>
+            <GrContact className="text-xs sm:text-base md:text-lg lg:text-xl" />
+            <span className="text-xs sm:text-sm md:text-base inline ">Blog</span>
           </button>
         </Link>
       </li>
       <li>
         <Link href="https://drive.google.com/file/d/1zKH2u-yxGKw3PRh_AaXJU90miGww2vFJ/view?usp=sharing">
-          <button className="">
-         
-            <span className="md:text-sm font-semibold"> 📄 RESUME</span>
-            {/* <a
-              href="https://drive.google.com/file/d/1T43fYbS81xpJQectj_YJp2gZ8FehkcNy/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className=" "
-            ></a> */}
+          <button className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 sm:py-2 rounded text-white font-semibold hover:bg-gray-700 focus:bg-gray-700">
+            <span className="text-xs sm:text-sm md:text-sm">📄 Resume</span>
           </button>
         </Link>
       </li>
     </>
   );
-///bg-transparent 
+
   return (
-   <nav className="fixed top-0 left-0 w-full z-50 bg-[#010118] text-white border-b border-cyan-400">
-  <div className="w-full flex justify-between items-center px-4 sm:px-6 lg:px-8 py-3 bg-opacity-95 shadow-md">
-        {/* Logo */}
-        <div>
-          <Image
-            height={100}
-            width={100}
-            src="https://i.ibb.co/M7HTfDb/SHARMIN-logo-removebg-preview.png"
-            alt="Logo"
-            className="w-20 sm:w-24 md:w-24 lg:w-28 object-contain"
-          />
-        </div>
+    <nav className="fixed top-0 left-0 w-full bg-[#010118] text-white z-50 shadow-md">
+      <div className="container mx-auto px-2 sm:px-4 md:px-6 lg:px-10 py-2 sm:py-3 md:py-4">
+        <div className="flex items-center justify-between w-full">
+          {/* Logo */}
+          <div>
+            <Image
+              height={100}
+              width={100}
+              src="https://i.ibb.co/M7HTfDb/SHARMIN-logo-removebg-preview.png"
+              alt="Logo"
+              className="w-14 sm:w-16 md:w-20 lg:w-24 object-contain"
+            />
+          </div>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex flex-wrap gap-2 sm:gap-3 md:gap-4 lg:gap-6 xl:gap-8">
-          {NavOptions}
-        </ul>
+          {/* Desktop Menu */}
+          <ul className="hidden md:flex items-center flex-wrap gap-1 sm:gap-2 md:gap-3 lg:gap-4 xl:gap-6">
+            {NavOptions}
+          </ul>
 
-        {/* Mobile Menu Icon */}
-        <div className="md:hidden">
-          <button
-            onClick={() => setOpen(!open)}
-            className="text-xl sm:text-2xl md:text-3xl text-white focus:outline-none"
-          >
-            {open ? (
-              <CgClose />
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 sm:h-6 md:h-7"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            )}
-          </button>
+          {/* Mobile Menu Icon */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setOpen(!open)}
+              className="text-lg sm:text-xl md:text-2xl text-white focus:outline-none"
+            >
+              {open ? (
+                <CgClose />
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 sm:h-6 md:h-7"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Mobile Dropdown */}
       {open && (
-        <div className="md:hidden px-4 sm:px-6 md:px-8 pb-4 bg-[#010118] transition-all duration-300">
-          <ul className="flex flex-col gap-3 sm:gap-4">{NavOptions}</ul>
+        <div className="md:hidden px-2 sm:px-4 py-2 text-white bg-[#010118] transition-all duration-300 ease-in-out">
+          <ul className="flex flex-col gap-1 sm:gap-2">{NavOptions}</ul>
         </div>
       )}
     </nav>

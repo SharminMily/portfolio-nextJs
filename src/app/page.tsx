@@ -10,42 +10,47 @@ import ContactMe from "@/components/modules/ContactMe/ContactMe";
 
 const Home = () => {
   return (
-    <div className="bg-[#010118] ">
+    <div className=" ">
       {/* bg-[#031035] bg-[#020223] */}
       <>
         <Navbar />
         <section
           id="home"
-          className="h-screen text-white items-center justify-center text-4xl"
+          className=""
         >
           <Banner />
         </section>
         <section
           id="about-section"
-          className=" bg-[#010118] text-white flex items-center justify-center"
+          className=""
         >
           <About />
         </section>
         <section
           id="skills-section"
-          className=" bg-[#010118] text-white flex items-center justify-center"
+          className=" "
         >
           <Skill />
         </section>
         <section
           id="project-section"
-          className=" bg-[#010118] text-white flex items-center justify-center my-10"
+          className=""
         >
           <Projects />
         </section>
 
        </>
 
-      <Services />
+     <section 
+      
+          className=""
+          >
+       <Services />
+     </section>
 
       <section
         id="contact-section"
-        className=" bg-[#010118] text-white flex items-center justify-center"
+        className=""
       >
         <ContactMe />
       </section>

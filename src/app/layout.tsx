@@ -29,8 +29,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} antialiased`}
        
-      >     
-        {children}
+      >  
+      <div className="max-w-full bg-[#010118] sm:max-w-2xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-4">
+            {children}
+      </div>          
       </body>
     </html>
   );
