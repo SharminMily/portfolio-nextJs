@@ -139,9 +139,9 @@ export default function Projects() {
                   </div>
                 </div> */}
 
-                <div className=" flex justify-between">
+                <div className=" md:flex text-center justify-between">
                   <div className="">{project.projectTime} </div>
-                  <div className=" flex gap-2">
+                  <div className=" flex justify-center gap-2">
                     <a
                       href={project.liveLink}
                       target="_blank"

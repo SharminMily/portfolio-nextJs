@@ -72,7 +72,7 @@ const ContactMe = () => {
                 <div className="flex flex-col">
                   <label className="text-white mb-1">Name</label>
                   <input
-                    className="px-3 py-2 rounded text-black"
+                    className="px-3 py-2 rounded border-1  border-cyan-700 shadow-gray-400 shadow-sm text-white"
                     type="text"
                     name="from_name"
                     placeholder="Your Name"
@@ -84,7 +84,7 @@ const ContactMe = () => {
                 <div className="flex flex-col">
                   <label className="text-white mb-1">Email</label>
                   <input
-                    className="px-3 py-2 rounded text-black"
+                    className="px-3 py-2 border-1  border-cyan-700 shadow-gray-400 shadow-sm  rounded text-white"
                     type="email"
                     name="from_email"
                     placeholder="Your Email"
@@ -96,7 +96,7 @@ const ContactMe = () => {
                 <div className="flex flex-col">
                   <label className="text-white mb-1">Message</label>
                   <textarea
-                    className="px-3 py-2 rounded text-white"
+                    className="px-3 py-2 border-1  border-cyan-700 shadow-gray-400 shadow-sm  rounded text-white"
                     name="message"
                     placeholder="Your Message"
                     rows={5}
